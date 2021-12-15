@@ -1,0 +1,23 @@
+domains
+	str=symbol
+predicates
+	person(str)
+	car(str)
+	likes(str,str)
+	forSale(str)
+	canBuy(str,str)
+clauses
+	person(mohamed).
+	person(samy).
+	person(samir).
+	person(osama).
+	car(lemon).
+	car(hot_rod).
+	likes(mohamed,hot_rod).
+	likes(samy,pizza).
+	likes(samir,tennis).
+	likes(osama,tennis).
+	forSale(pizza).
+	forSale(lemon).
+	forSale(hot_rod).
+	canBuy(X,Y):-person(X),car(Y),forSale(Y),likes(X,Y).
